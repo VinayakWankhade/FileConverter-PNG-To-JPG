@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PNG to JPG Converter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="wrapper" ondrop="handleDrop(event)" ondragover="handleDragOver(event)">
+        <div class="header flex justify-around items-center p-3 shadow-lg">
+            <img src="./images/freeconvert.png" alt="img" class="h-[50px]">
+            <div class=" nav flex gap-7 text-xl">
+                <a href="#">Tools</a>
+                <a href="#">Contact Us</a>
+                <a href="#">About Us</a>
+            </div>
+        </div>
+        <div class="main-body p-[24px] text-center flex flex-col">
+            <div class="text-xl"><a href="#" class="underline decoration-solid text-blue-600 font-semibold ">Convert to
+                    JPG</a> > PNG to JPG</div>
+            <div class="text-main">
+                <h1 class="text-5xl text-gray-700">Convert PNG to JPG</h1>
+                <h2 class="text-gray-700">Transform <b>PNG</b> images to <b>JPG</b> format. <br>
+                    Convert multiple <b>PNG</b> to <b>JPG</b> online.
+                </h2>
+            </div>
+            <div class="btn-btn flex justify-center gap-4">
+                <input type="file" id="fileInput" accept=".png" multiple style="display: none;">
+                <a href="#" class="rounded-xl" id="btn" onclick="selectImages()">Select images</a>
+            </div>
+            <h3 class="font-sans mt-3">or Drop image here</h3>
+            <div id="downloadLinksContainer"></div>
+            <canvas id="canvas" style="display: none;"></canvas>
+            <div id="loadingIndicator" style="display: none;">Converting...</div>
+            <div id="imageContainer" class="image-container"></div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-wrapper">
+            <div class="footer-columns">
+                <div class="footer-links">
+                    <img src="./images/freeconvert.png" alt="images" class="w-49 h-10">
+                    <section>
+                        <h3>Resources</h3>
+                        <ul>
+                            <li>
+                                <a href="#" title="Support">Home</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Sitemap">Features</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Newsletter">Pricing</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Help Centre">Tools</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Investor">FAQ</a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Company</h3>
+                        <ul>
+                            <li>
+                                <a href="#" title="About Us">About Us</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Blog">Privacy</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Careers">Careers</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Press">Press</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Contact">Contact</a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Legal</h3>
+                        <ul>
+                            <li>
+                                <a href="#" title="Terms and services">
+                                    Terms
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" title="Cookies">
+                                    Cookies
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" title="Licenses">
+                                    Licenses
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-description">
+                    <p>Convert file with ease with FreeConvert</p>
+                </div>
+                <small>©FreeConvert pvt Ltd. <span id="year"></span>, All rights reserved</small>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/script.js"></script>
+</body>
+</html>
+
+
